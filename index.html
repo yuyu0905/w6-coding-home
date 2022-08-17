@@ -1,10 +1,54 @@
----
-title: 首頁 - 程式家教
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首頁 - 程式家教</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
+    <div class="container">
+      <h1 class="mb-0">
+        <a class="navbar-brand py-4 lh-1 d-lg-none" href="index.html">
+          <img src="assets/images/logo2.svg" class="img-fluid" width="24" height="24" alt="logo">
+        </a>
+        <a class="navbar-brand py-4 lh-1 d-none d-lg-block" href="index.html">
+          <img src="assets/images/logo.svg" class="img-fluid logo" alt="logo">
+        </a>
+      </h1>
+
+      <button class="navbar-toggler border-0 text-secondary py-4" type="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-icons-outlined align-middle">drag_handle</span>
+      </button>
+
+      <div class="collapse navbar-collapse flex-grow-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-xxl-0 text-center gap-lg-4 gap-xxl-7">
+          <li class="nav-item mb-0">
+            <a class="nav-link py-4 active" aria-current="index" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="#">課程介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="#">
+              <span class="material-icons align-middle text-white me-1">account_circle</span>登入
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  
+</header>
+
+    
 <main>
   <!-- banner -->
   <section class="bg-banner bg-img">
@@ -386,3 +430,16 @@ current: index
 
 
 </section>
+
+
+    <footer class="bg-black-900">
+    <div class="container">
+        <p class="fs-8 text-black-500 text-center mb-0 py-3 py-xxl-4 fs-xxl-7">Coding Home © 2022 All Rights Reserved</p>
+    </div>
+</footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
