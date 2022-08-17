@@ -1,0 +1,141 @@
+.bg-banner {
+  background-image: url("../images/bg_home_mobile.jpg");
+  height: calc(100vh - 72px);
+  
+  @include media-breakpoint-up(xxl) {
+    background-image: url("../images/bg_home.jpg");
+  }
+}
+
+.square-box {
+  width: 10px;
+  height: 10px;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.bg-info01 {
+  background-image: url("../images/info01.jpg");
+  height: 263px;
+  @include media-breakpoint-up(xxl) {
+    height: 615px;
+  }
+}
+
+.bg-info02 {
+  background-image: url("../images/info02.jpg");
+  height: 263px;
+  @include media-breakpoint-up(xxl) {
+    height: 615px;
+  }
+}
+
+.bg-info03 {
+  background-image: url("../images/info03.jpg");
+  height: 263px;
+  @include media-breakpoint-up(xxl) {
+    height: 615px;
+  }
+}
+
+.bg-info04 {
+  background-image: url("../images/info04.jpg");
+  height: 263px;
+  @include media-breakpoint-up(xxl) {
+    height: 615px;
+  }
+}
+
+.icon-large {
+  font-size: 80px;
+}
+
+.card-service {
+  @include media-breakpoint-up(xxl) {
+    opacity: 0.2;
+  }
+}
+
+.card-border-secondary {
+  @include media-breakpoint-up(xxl) {
+    &:hover {
+      border: 1px solid $secondary;
+      opacity: 1;
+    }
+  }
+}
+
+.img-article {
+  @include media-breakpoint-up(xxl) {
+    height: 180px;
+  }
+}
+
+.square-rounded {
+  width: 32px;
+  height: 32px;
+  display: none;
+  &-topLeft {
+    border-top: 2px solid $secondary;
+    border-left: 2px solid $secondary;
+    border-top-left-radius: 10px;
+  }
+  &-topRight {
+    border-top: 2px solid $secondary;
+    border-right: 2px solid $secondary;
+    border-top-right-radius: 10px;
+  }
+  &-bottomLeft {
+    border-bottom: 2px solid $secondary;
+    border-left: 2px solid $secondary;
+    border-bottom-left-radius: 10px;
+  }
+  &-bottomRight {
+    border-bottom: 2px solid $secondary;
+    border-right: 2px solid $secondary;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.card-share {
+  @include media-breakpoint-up(xxl) {
+    &:hover {
+      .square-rounded {
+        display: block;
+      }
+    }
+  }
+}
+
+.info {
+  background-color: $dark;
+  opacity: 0.9;
+
+  &-line {
+    background-color: $secondary;
+    @include media-breakpoint-up(xxl) {
+      background-color: $gray-500;
+    }
+  }
+
+  &-icon {
+    @include media-breakpoint-up(xxl) {
+      color: $gray-500;
+    }
+  }
+  
+  @include media-breakpoint-up(xxl) {
+    &:hover {
+      background-color: transparent;
+      opacity: 1;
+      .info-icon {
+        color: $secondary;
+      }
+      .info-line {
+        background-color: $secondary;
+      }
+    }
+  }
+}

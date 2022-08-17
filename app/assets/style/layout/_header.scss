@@ -1,0 +1,9 @@
+.logo {
+  height: 42px;
+}
+
+.nav-link {
+  &:hover {
+    background-color: $secondary;
+  }
+}
