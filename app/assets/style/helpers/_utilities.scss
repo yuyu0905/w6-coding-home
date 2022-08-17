@@ -17,7 +17,7 @@
 }
 
 .text-gradient-primary {
-    background: linear-gradient(180deg, #09ACF5, $secondary);
+    background: linear-gradient(180deg, $third, $secondary);
     /* 將背景裁切成只有文字部分 */
     background-clip: text;
      /* 因為 Chrome 還沒有很好的支援度，所以要加上 webkit 前綴 */
@@ -26,12 +26,12 @@
 }
 
 .bg-gradient-primary {
-    background: linear-gradient(104deg, #09ACF5, $secondary);
+    background: linear-gradient(104deg, $third, $secondary);
 }
 
 .btn-gradient-primary {
     color: $white;
-    background: linear-gradient(104deg, #09ACF5, $secondary);
+    background: linear-gradient(104deg, $third, $secondary);
     border: transparent;
     &:hover {
         color: white;
@@ -41,10 +41,10 @@
 
 .btn-black {
     color: $white;
-    background-color: $primary;
+    background-color: transparent;
     &:hover {
-        color: $white;
-        background-color: $secondary;
+        color: $secondary;
+        border-color: $secondary !important;
     }
 }
 
@@ -78,8 +78,18 @@
     }
 }
 
+.fs-xxl-4 {
+    @include media-breakpoint-up(xxl) {
+        font-size: $h4-font-size !important;
+    }
+}
+
 .fs-xxl-7 {
     @include media-breakpoint-up(xxl) {
         font-size: $h7-font-size !important;
     }
+}
+
+.overflow-x {
+    overflow-x: auto;
 }
