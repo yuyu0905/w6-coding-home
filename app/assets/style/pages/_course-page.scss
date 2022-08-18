@@ -1,0 +1,16 @@
+.price {
+    &-sticky {
+        top: 172px;
+        z-index: 1019;
+    }
+
+    &-detail {
+        color: $white;
+        &:hover {
+            color: $secondary !important;
+            .btn-gradient-primary {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

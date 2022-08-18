@@ -1,19 +1,7 @@
-.bg-black-900 {
-    background-color: #1A1A1A;
-}
-
 .bg-img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.text-black-500 {
-    color: #909090;
-}
-
-.text-black-300 {
-    color: #C1C1C1;
 }
 
 .text-gradient-primary {
@@ -92,4 +80,8 @@
 
 .overflow-x {
     overflow-x: auto;
+}
+
+.list-square {
+    list-style-type: square;
 }

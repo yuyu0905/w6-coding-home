@@ -16,6 +16,10 @@
   font-size: 50px;
 }
 
+.icon-lg {
+  font-size: 80px;
+}
+
 .bg-info01 {
   background-image: url("../images/info01.jpg");
   height: 263px;
@@ -46,10 +50,6 @@
   @include media-breakpoint-up(xxl) {
     height: 615px;
   }
-}
-
-.icon-large {
-  font-size: 80px;
 }
 
 .card-service {
@@ -135,6 +135,107 @@
       }
       .info-line {
         background-color: $secondary;
+      }
+    }
+  }
+}
+
+.bg-feedback {
+    background-image: url("../images/bg_share.jpg");
+    height: 733px;
+}
+
+
+.swiper {
+  width: 100%;
+  height: auto;
+  @include media-breakpoint-up(xxl) {
+    height: 429px;
+  }
+
+  &-img {
+    width: calc(100% - 5px); // 定位往左 5px, 避免切到圖
+    height: 213px;
+    top: 0;
+    left: 5px;
+
+    @include media-breakpoint-up(xxl) {
+      width: 60%;
+      height: 381px;
+      left: 10px;
+    }
+    
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #7C7E77;
+      border-radius: 24px;
+      z-index: -1;
+      @include media-breakpoint-up(xxl) {
+        left: -10px;
+        top: 10px;
+      }
+    }
+  }
+
+  &-card {
+    position: relative;
+    border-radius: 24px 24px 24px 0;
+    @include media-breakpoint-up(xxl) {
+      width: 40%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &-student {
+    width: 80px;
+    height: 80px;
+    @include media-breakpoint-up(xxl) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &-buttons {
+    position: initial;
+    transform: none;
+    @include media-breakpoint-up(xxl) {
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+    }
+  }
+
+  &-button-next:after, &-button-prev:after {
+    content: '';
+  }
+
+  &-button-next, &-button-prev {
+    position: unset;
+    width: 24px;
+    height: 24px;
+  }
+
+  &-pagination {
+    position: unset;
+
+    &-bullet {
+      background-color: $secondary;
+      &-active {
+        width: 16px;
+        border-radius: 100px;
       }
     }
   }

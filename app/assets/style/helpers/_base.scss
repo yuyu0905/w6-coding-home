@@ -4,3 +4,7 @@
 body {
     font-family: 'Azeret Mono', monospace, "Noto Sans TC", "sans-serif";
 }
+
+img {
+    object-fit: cover; // 防止圖片變形
+}
