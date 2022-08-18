@@ -24,9 +24,9 @@
         </a>
       </h1>
 
-      <button class="navbar-toggler border-0 text-secondary py-4" type="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-toggler border-0 text-secondary py-4" role="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="material-icons-outlined align-middle">drag_handle</span>
-      </button>
+      </a>
 
       <div class="collapse navbar-collapse flex-grow-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-xxl-0 text-center gap-lg-4 gap-xxl-7">
@@ -37,8 +37,8 @@
             <a class="nav-link py-4 active" href="course.html">課程介紹</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link py-4" href="#">
-              <span class="material-icons align-middle text-white me-1">account_circle</span>登入
+            <a class="nav-link py-4" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <span class="material-icons align-middle me-1">account_circle</span>登入
             </a>
           </li>
         </ul>
@@ -49,6 +49,42 @@
   <div class="pt-1 px-4 info-line bg-secondary w-50 position-absolute bottom-0 start-0"></div>
   <div class="pt-1 px-4 info-line bg-third w-50 position-absolute bottom-0 start-50"></div>
 </header>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-primary text-white px-5 pt-3 pb-6 login-modal">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 mt-0 mb-4 mb-xxl-7">
+        <h4 class="modal-title text-center fw-bold" id="loginModal">登入</h4>
+        <form class="text-gray-light">
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputEmail1" class="form-label fs-6">信箱</label>
+            <input type="email" class="form-control bg-primary" id="inputEmail1" placeholder="請輸入信箱">
+          </div>
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputPassword1" class="form-label fs-6">密碼</label>
+            <input type="password" class="form-control bg-primary" id="inputPassword1" placeholder="請輸入密碼">
+          </div>
+          <button type="submit" class="btn btn-gradient-primary w-100 fs-6 py-2 rounded-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer border-0 p-0">
+        <p class="separator w-100 d-flex flex-row m-0 text-gray-light mb-3">其他登入方式</p>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center mb-3 mb-xxl-4" role="button">
+          <img src="assets/images/icon_fb.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_fb">
+          <span class="flex-fill">Facebook 登入</span>
+        </a>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center" role="button">
+          <img src="assets/images/icon_google.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_google">
+          <span class="flex-fill">Google 登入</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
     
 <main>
@@ -71,14 +107,14 @@
                       <p class="text-white mt-2">Belinda</p>
                     </div>
                     <div class="card-body p-0 flex-lg-grow-1 ms-lg-7">
-                      <h5 class="card-title text-white mb-1 fs-xxl-4">基礎前端 - HTML</h5>
+                      <h5 class="card-title text-white mb-1 fs-xxl-4 fw-bold">基礎前端 - HTML</h5>
                       <p class="card-text text-secondary mb-2">前端語言</p>
                       <p class="card-text text-white">帶領無基礎的平民老百姓，從最基礎的 HTML 語法出發，使用最淺顯易懂的語言與生活隨處可見的例子，輕鬆進入...</p>
                     </div>
                     <div class="card-footer p-0 mt-7 bg-primary border-0 text-white mt-lg-0">
                       <div class="d-flex justify-content-center align-items-center gap-3 mb-3 flex-lg-column gap-lg-1">
                         <p class="fs-6 mb-0 pt-2">50分鐘</p>
-                        <p class="fs-2 mb-0">NT$1600</p>
+                        <p class="fs-2 mb-0 ff-azeret-mono">NT$1600</p>
                       </div>
                       <div class="d-flex justify-content-center align-items-center gap-2 flex-lg-column">
                         <a class="btn btn-black fs-6 py-2 px-3 border border-white rounded-4 px-xxl-7" role="button" href="course-info.html">課程介紹</a>
@@ -94,14 +130,14 @@
                       <p class="text-white mt-2">Guava</p>
                     </div>
                     <div class="card-body p-0 flex-lg-grow-1 ms-lg-7">
-                      <h5 class="card-title text-white mb-1 fs-xxl-4">2022 Python 全攻略｜從入門到實務</h5>
+                      <h5 class="card-title text-white mb-1 fs-xxl-4 fw-bold">2022 Python 全攻略｜從入門到實務</h5>
                       <p class="card-text text-secondary mb-2">後端語言</p>
                       <p class="card-text text-white">Python支援多種程式設計範式，包括函數式、指令式、反射式、結構化和物件導向程式設計，它擁有動態型別系...</p>
                     </div>
                     <div class="card-footer p-0 mt-7 bg-primary border-0 text-white mt-lg-0">
                         <div class="d-flex justify-content-center align-items-center gap-3 mb-3 flex-lg-column gap-lg-1">
                           <p class="fs-6 mb-0 pt-2">50分鐘</p>
-                          <p class="fs-2 mb-0">NT$2200</p>
+                          <p class="fs-2 mb-0 ff-azeret-mono">NT$2200</p>
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 flex-lg-column">
                           <a class="btn btn-black fs-6 py-2 px-3 border border-white rounded-4 px-xxl-7" role="button" href="#">課程介紹</a>
@@ -117,14 +153,14 @@
                       <p class="text-white mt-2">Joe</p>
                     </div>
                     <div class="card-body p-0 flex-lg-grow-1 ms-lg-7">
-                      <h5 class="card-title text-white mb-1 fs-xxl-4">活用 Line Bot ｜APP 開發到上架完整實戰攻略</h5>
+                      <h5 class="card-title text-white mb-1 fs-xxl-4 fw-bold">活用 Line Bot ｜APP 開發到上架完整實戰攻略</h5>
                       <p class="card-text text-secondary mb-2">行動應用開發</p>
                       <p class="card-text text-white">Line Bot 可用於實用的目的，如客戶服務或資訊獲取，有些聊天機器人會搭載自然語言處理系統，但大多簡單的...</p>
                     </div>
                     <div class="card-footer p-0 mt-7 bg-primary border-0 text-white mt-lg-0">
                         <div class="d-flex justify-content-center align-items-center gap-3 mb-3 flex-lg-column gap-lg-1">
                           <p class="fs-6 mb-0 pt-2">50分鐘</p>
-                          <p class="fs-2 mb-0">NT$1800</p>
+                          <p class="fs-2 mb-0 ff-azeret-mono">NT$1800</p>
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 flex-lg-column">
                           <a class="btn btn-black fs-6 py-2 px-3 border border-white rounded-4 px-xxl-7" role="button" href="#">課程介紹</a>
@@ -140,14 +176,14 @@
                       <p class="text-white mt-2">Lina</p>
                     </div>
                     <div class="card-body p-0 flex-lg-grow-1 ms-lg-7">
-                      <h5 class="card-title text-white mb-1 fs-xxl-4">Linux 零基礎七天入門｜入門到實務</h5>
+                      <h5 class="card-title text-white mb-1 fs-xxl-4 fw-bold">Linux 零基礎七天入門｜入門到實務</h5>
                       <p class="card-text text-secondary mb-2">作業系統與伺服器</p>
                       <p class="card-text text-white">LLinux是一種自由和開放原始碼的類UNIX作業系統，作業系統中包含了許多使用者圖形介面和其他實用工具。...</p>
                     </div>
                     <div class="card-footer p-0 mt-7 bg-primary border-0 text-white mt-lg-0">
                         <div class="d-flex justify-content-center align-items-center gap-3 mb-3 flex-lg-column gap-lg-1">
                           <p class="fs-6 mb-0 pt-2">50分鐘</p>
-                          <p class="fs-2 mb-0">NT$1100</p>
+                          <p class="fs-2 mb-0 ff-azeret-mono">NT$1100</p>
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 flex-lg-column">
                           <a class="btn btn-black fs-6 py-2 px-3 border border-white rounded-4 px-xxl-7" role="button" href="#">課程介紹</a>
@@ -163,7 +199,7 @@
 
     <footer class="bg-gray-dark">
     <div class="container">
-        <p class="fs-8 text-gray text-center mb-0 py-3 py-xxl-4 fs-xxl-7">Coding Home © 2022 All Rights Reserved</p>
+        <p class="fs-8 text-gray text-center mb-0 py-3 py-xxl-4 fs-xxl-7 ff-azeret-mono">Coding Home © 2022 All Rights Reserved</p>
     </div>
 </footer>
 
