@@ -10,9 +10,9 @@
         </a>
       </h1>
 
-      <button class="navbar-toggler border-0 text-secondary py-4" type="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-toggler border-0 text-secondary py-4" role="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="material-icons-outlined align-middle">drag_handle</span>
-      </button>
+      </a>
 
       <div class="collapse navbar-collapse flex-grow-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-xxl-0 text-center gap-lg-4 gap-xxl-7">
@@ -23,8 +23,8 @@
             <a class="nav-link py-4 <%- current == 'course' ? 'active' : '' %>" href="course.html">課程介紹</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link py-4" href="#">
-              <span class="material-icons align-middle text-white me-1">account_circle</span>登入
+            <a class="nav-link py-4" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <span class="material-icons align-middle me-1">account_circle</span>登入
             </a>
           </li>
         </ul>
@@ -35,3 +35,39 @@
   <div class="pt-1 px-4 info-line bg-secondary w-50 position-absolute bottom-0 start-0"></div>
   <div class="pt-1 px-4 info-line bg-third w-50 position-absolute bottom-0 start-50"></div>
 </header>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-primary text-white px-5 pt-3 pb-6 login-modal">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 mt-0 mb-4 mb-xxl-7">
+        <h4 class="modal-title text-center fw-bold" id="loginModal">登入</h4>
+        <form class="text-gray-light">
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputEmail1" class="form-label fs-6">信箱</label>
+            <input type="email" class="form-control bg-primary" id="inputEmail1" placeholder="請輸入信箱">
+          </div>
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputPassword1" class="form-label fs-6">密碼</label>
+            <input type="password" class="form-control bg-primary" id="inputPassword1" placeholder="請輸入密碼">
+          </div>
+          <button type="submit" class="btn btn-gradient-primary w-100 fs-6 py-2 rounded-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer border-0 p-0">
+        <p class="separator w-100 d-flex flex-row m-0 text-gray-light mb-3">其他登入方式</p>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center mb-3 mb-xxl-4" role="button">
+          <img src="assets/images/icon_fb.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_fb">
+          <span class="flex-fill">Facebook 登入</span>
+        </a>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center" role="button">
+          <img src="assets/images/icon_google.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_google">
+          <span class="flex-fill">Google 登入</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

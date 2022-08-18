@@ -5,5 +5,35 @@
 .nav-link {
   &:hover {
     background-color: $secondary;
+    @include media-breakpoint-up(xxl) {
+      background-color: $primary;
+      color: $secondary !important;
+    }
   }
+}
+
+.separator {
+  &::before, &::after {
+    content: '';
+    flex: 1 1;
+    border-bottom: 1px solid $gray-light;
+    margin: auto;
+  }
+  &::before {
+    margin-right: 16px;
+  }
+  &::after {
+    margin-left: 16px;
+  }
+}
+
+.form-control {
+  &:focus {
+    border-color: $secondary;
+    box-shadow: 0 .5rem 1rem rgba($secondary, .15);;
+  }
+}
+
+.login-modal {
+  border-color: $white;
 }
