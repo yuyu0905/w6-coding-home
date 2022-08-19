@@ -27,13 +27,6 @@
   }
 }
 
-.form-control {
-  &:focus {
-    border-color: $secondary;
-    box-shadow: 0 .5rem 1rem rgba($secondary, .15);;
-  }
-}
-
 .login-modal {
   border-color: $white;
 }

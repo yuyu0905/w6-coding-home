@@ -34,7 +34,7 @@
 .btn-black {
     color: $white;
     background-color: transparent;
-    &:hover {
+    &:hover, &.active {
         color: $secondary;
         border-color: $secondary !important;
     }
@@ -58,12 +58,6 @@
     }
 }
 
-.h6-xxl {
-    @include media-breakpoint-up(xxl) {
-        font-size: $h6-font-size;
-    }
-}
-
 .fs-xxl-3 {
     @include media-breakpoint-up(xxl) {
         font-size: $h3-font-size !important;
@@ -73,6 +67,12 @@
 .fs-xxl-4 {
     @include media-breakpoint-up(xxl) {
         font-size: $h4-font-size !important;
+    }
+}
+
+.fs-xxl-6 {
+    @include media-breakpoint-up(xxl) {
+        font-size: $h6-font-size !important; // 18px
     }
 }
 
@@ -88,4 +88,11 @@
 
 .list-square {
     list-style-type: square;
+}
+
+.form-control, .form-select {
+    &:focus {
+      border-color: $secondary;
+      box-shadow: 0 .5rem 1rem rgba($secondary, .15);;
+    }
 }

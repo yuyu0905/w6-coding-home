@@ -80,6 +80,7 @@ $third:         #09ACF5 !default;
 $gray-light:    $gray-400 !default;
 $gray:          $gray-600 !default;
 $gray-dark:     $gray-800 !default;
+$black:         $black;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -96,6 +97,7 @@ $theme-colors: (
   "gray-light": $gray-light,
   "gray":       $gray,
   "gray-dark":  $gray-dark,
+  "black":      $black,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -262,10 +264,10 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2,
-  6: $spacer * 2.5,
-  7: $spacer * 3,
+  4: $spacer * 1.5, // 24px
+  5: $spacer * 2, // 32px
+  6: $spacer * 2.5, // 40px
+  7: $spacer * 3, // 48px
   8: $spacer * 3.125, // 50px
   9: $spacer * 3.5, // 56px
   10:  $spacer * 4, // 64px
@@ -460,7 +462,7 @@ $line-height-lg:              2 !default;
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base * 1.5 !default; // 24px
 $h5-font-size:                $font-size-base * 1.25 !default; // 20px
 $h6-font-size:                $font-size-base * 1.125 !default; // 18px
 $h7-font-size:                $font-size-base !default;
@@ -826,7 +828,7 @@ $form-select-disabled-bg:           $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x center !default;
 $form-select-bg-size:               16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color:       $gray-800 !default;
+$form-select-indicator-color:       $white;//$gray-800 !default;
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
