@@ -1,0 +1,42 @@
+<!-- 付款進度條 -->
+<section class="bg-dark py-4 pb-xxl-3">
+  <div class="container">
+      <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4 timeline <%- current == 'course-pay' || current == 'course-pay-success' ? 'active' : '' %>"></div>
+          <div class="col-4 timeline <%- current == 'course-pay-success' ? 'active' : '' %>"></div>
+      </div>
+      <div class="row">
+          <div class="col-4 d-flex flex-column align-items-center">
+              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center active">
+                  <% if( current == 'course-registration' ) { %>
+                    <span class="align-middle small">1</span>
+                  <% } else { %>  
+                    <span class="material-icons-outlined align-middle small">done</span>
+                  <% } %>
+              </div>
+              <p class="text-secondary mt-1">課程報名</p>
+          </div>
+          <div class="col-4 d-flex flex-column align-items-center">
+              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center <%- current == 'course-pay' || current == 'course-pay-success' ? 'active' : '' %>">
+                <% if( current == 'course-registration' ||  current == 'course-pay') { %>
+                  <span class="align-middle small">2</span>
+                <% } else { %>  
+                  <span class="material-icons-outlined align-middle small">done</span>
+                <% } %>
+              </div>
+              <p class=" <%- current == 'course-pay' || current == 'course-pay-success' ? 'text-secondary' : 'text-gray-light' %> mt-1">信用卡付款</p>
+          </div>
+          <div class="col-4 d-flex flex-column align-items-center">
+              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center <%- current == 'course-pay-success' ? 'active' : '' %>">
+                <% if( current != 'course-pay-success' ) { %>
+                  <span class="align-middle small">3</span>
+                <% } else { %>  
+                  <span class="material-icons-outlined align-middle small">done</span>
+                <% } %>
+              </div>
+              <p class="<%- current == 'course-pay-success' ? 'text-secondary' : 'text-gray-light' %> mt-1">付款成功</p>
+          </div>
+      </div>
+  </div>
+</section>

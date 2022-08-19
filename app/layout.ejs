@@ -8,11 +8,13 @@
     <title><%- title %></title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
     <%- include('./components/header.ejs') %>
+    <%- current == 'course-registration' || current == 'course-pay' || current == 'course-pay-success' ? include('./components/pay-progress-bar.ejs') : '' %>
 
     <%- contents %>
 
@@ -20,6 +22,8 @@
 
     <script src="./assets/js/vendors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 

@@ -96,3 +96,10 @@
       box-shadow: 0 .5rem 1rem rgba($secondary, .15);;
     }
 }
+
+// 日期套件
+.datepicker-cell {
+    &.selected, &.selected:hover {
+        background-color: $secondary;
+    }
+}

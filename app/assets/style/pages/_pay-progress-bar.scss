@@ -1,0 +1,36 @@
+.step {
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+
+    &.active {
+        background-color: $secondary !important;
+        border-color: $secondary !important;
+    }
+}
+
+
+.timeline {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 9px;
+      left: 0;  
+      right: 0;
+      height: 2px;
+      background-color: $gray-light;
+    }
+
+    &.active {
+        &::after {
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 0;  
+            right: 0;
+            height: 2px;
+            background-color: $secondary !important;
+        }
+    }
+}
