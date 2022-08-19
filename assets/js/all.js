@@ -39,5 +39,19 @@ $(function () {
       prevEl: ".swiper-button-prev"
     }
   });
+  var elem = document.getElementById('course-date');
+  var datepicker = new Datepicker(elem, {
+    format: "yyyy/mm/dd",
+    language: "zh-TW"
+  }); // 選擇付款方式
+
+  $(".pay-type").click(function (e) {
+    $(this).addClass('active');
+    $(this).parents().siblings().children('a').removeClass('active');
+  }); // 上課地點
+
+  $("#course").change(function () {
+    $(".pay-money").text($(this).val());
+  });
 });
 //# sourceMappingURL=all.js.map

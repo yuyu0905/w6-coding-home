@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>課程報名 - 程式家教</title>
+    <title>course-pay-success - 程式家教</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
@@ -91,33 +91,33 @@
   <div class="container">
       <div class="row">
           <div class="col-2"></div>
-          <div class="col-4 timeline "></div>
-          <div class="col-4 timeline "></div>
+          <div class="col-4 timeline active"></div>
+          <div class="col-4 timeline active"></div>
       </div>
       <div class="row">
           <div class="col-4 d-flex flex-column align-items-center">
               <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center active">
-                  
-                    <span class="align-middle small">1</span>
+                    
+                    <span class="material-icons-outlined align-middle small">done</span>
                   
               </div>
               <p class="text-secondary mt-1">課程報名</p>
           </div>
           <div class="col-4 d-flex flex-column align-items-center">
-              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center ">
-                
-                  <span class="align-middle small">2</span>
+              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center active">
+                  
+                  <span class="material-icons-outlined align-middle small">done</span>
                 
               </div>
-              <p class=" text-gray-light mt-1">信用卡付款</p>
+              <p class=" text-secondary mt-1">信用卡付款</p>
           </div>
           <div class="col-4 d-flex flex-column align-items-center">
-              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center ">
-                
-                  <span class="align-middle small">3</span>
+              <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center active">
+                  
+                  <span class="material-icons-outlined align-middle small">done</span>
                 
               </div>
-              <p class="text-gray-light mt-1">付款成功</p>
+              <p class="text-secondary mt-1">付款成功</p>
           </div>
       </div>
   </div>
@@ -125,73 +125,22 @@
 
     
 <main>
-    <!-- 訂購課程詳細資料 -->
+    <!-- 完成訂購 -->
     <section class="bg-black pt-4 pb-6 pt-xxl-7 pb-xxl-12">
       <div class="container">
         <div class="row gy-6 gy-xxl-7 justify-content-center align-items-center">
-            <div class="col-12 col-xxl-4 regist-teacher">
-              <div class="card bg-primary p-4 py-xxl-7 px-xxl-5 card-teacher position-relative">
-                <div class="d-flex flex-column align-items-center mb-3 mb-lg-4">
-                  <img src="assets/images/teacher01.jpg" class="img-fluid rounded-circle border border-3 border-secondary" width="100" height="100" alt="teacher01">
-                </div>
-                <div class="card-body d-flex flex-column align-items-center">
-                  <h5 class="card-title text-white mb-2 mb-xxl-1 fs-xxl-6 fw-bold">2022 Python 全攻略｜從入門到實務</h5>
-                  <p class="card-text text-secondary mb-2">前端語言</p>
-                  <p class="card-text text-white">帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的 HTML 語法出發。</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-7 regist-form">
+            <div class="col-12 col-xxl-7">
                 <div class="card bg-dark p-4 py-xxl-7 px-xxl-5">
-                  <h4 class="card-title text-white mb-4 mb-xxl-7 fw-bold text-center">課程報名</h4>
-                  <div class="card-body d-flex flex-column align-items-center align-items-xxl-start">
-                    <p class="card-text text-white fw-bold fs-6 mb-3">選擇付款方式</p>
-                    <ul class="list-unstyled row d-xxl-flex mb-5">
-                        <li class="col-6 col-xxl-auto mb-2 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block pay-type" role="button">信用卡付款</a></li>
-                        <li class="col-6 col-xxl-auto mb-2 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block pay-type" role="button">超商繳款</a></li>
-                        <li class="col-6 col-xxl-auto mb-0 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block pay-type" role="button">ATM轉帳</a></li>
-                        <li class="col-6 col-xxl-auto mb-0 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block pay-type" role="button">12期分期付款</a></li>
-                    </ul>
-                    <p class="card-text text-white fw-bold fs-6 mb-3">訂單資訊</p>
-
-                    <form class="row">
-                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
-                            <label for="name" class="form-label text-gray-light fs-6">姓名</label>
-                            <input type="text" class="form-control bg-primary text-white" id="name" placeholder="請輸入姓名">
-                        </div>
-                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
-                            <label for="phone" class="form-label text-gray-light fs-6">電話</label>
-                            <input type="tel" class="form-control bg-primary text-white" id="phone" placeholder="請輸入電話號碼">
-                        </div>
-                        <div class="col-12 mb-3 mb-xxl-5">
-                            <label for="email" class="form-label text-gray-light fs-6">Email</label>
-                            <input type="email" class="form-control bg-primary text-white" id="email" placeholder="請輸入Email">
-                        </div>
-                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
-                            <label for="course" class="form-label text-gray-light fs-6">課程</label>
-                            <select class="form-select bg-primary text-white" aria-label="course" id="course">
-                                <option value="NT$1600" selected>1堂50分鐘</option>
-                                <option value="NT$1400">3堂50分鐘</option>
-                                <option value="NT$1000">10堂50分鐘</option>
-                                <option value="NT$900">20堂50分鐘</option>
-                                <option value="洽談報價">客製化課程/專案製作</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
-                            <label for="course-date" class="form-label text-gray-light fs-6">想預約的日期</label>
-                            <input type="text" class="form-control bg-primary text-white text-white" id="course-date" placeholder="請選擇日期">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <label for="place" class="form-label text-gray-light fs-6">上課地點</label>
-                            <input type="text" class="form-control bg-primary text-white" id="place" placeholder="請輸入上課地點">
-                        </div>
-
-                        <div class="col-12 d-xxl-flex justify-content-xxl-between align-items-xxl-center">
-                            <p class="fs-6 text-white ff-azeret-mono mb-4 mb-xxl-0 pay-money">NT$1600</p>
-                            <a class="btn btn-gradient-primary fs-6 py-2 px-7 rounded-4 d-block" href="course-pay.html" role="button">前往結賬</a>
-                        </div>
-                    </form>
-                  </div>
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h4 class="card-title text-white mb-4 mb-xxl-7 fw-bold">
+                            <span class="material-icons-outlined align-middle fs-fz3 me-2 text-secondary">verified</span>
+                            完成訂購
+                        </h4>
+                        <p class="text-white mb-4 mb-xxl-5">
+                            恭喜您已完成<span class="fw-bold">「2022 Python 全攻略｜從入門到實務」</span>課程報名，請注意郵件訊息，家教老師將與您聯繫！
+                        </p>
+                        <a class="btn btn-gradient-primary fs-6 py-2 px-7 rounded-4 d-block" href="course.html" role="button">看看其他課程</a>
+                    </div>
                 </div>
             </div>
         </div>

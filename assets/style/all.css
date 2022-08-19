@@ -14727,6 +14727,10 @@ img {
           box-shadow: 0 0.5rem 1rem rgba(98, 219, 84, 0.15);
 }
 
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+  background-color: #62DB54;
+}
+
 .logo {
   height: 42px;
 }
@@ -14761,6 +14765,41 @@ img {
 
 .login-modal {
   border-color: #fff;
+}
+
+.step {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.step.active {
+  background-color: #62DB54 !important;
+  border-color: #62DB54 !important;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::after {
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #C1C1C1;
+}
+
+.timeline.active::after {
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #62DB54 !important;
 }
 
 .bg-banner {
@@ -15065,41 +15104,6 @@ img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.step {
-  width: 20px;
-  height: 20px;
-  z-index: 1;
-}
-
-.step.active {
-  background-color: #62DB54 !important;
-  border-color: #62DB54 !important;
-}
-
-.timeline {
-  position: relative;
-}
-
-.timeline::after {
-  position: absolute;
-  content: '';
-  top: 9px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #C1C1C1;
-}
-
-.timeline.active::after {
-  position: absolute;
-  content: '';
-  top: 9px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #62DB54 !important;
 }
 
 .card-teacher::after {
