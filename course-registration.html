@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>課程報名 - 程式家教</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
+    <div class="container">
+      <h1 class="mb-0">
+        <a class="navbar-brand py-4 lh-1 d-lg-none" href="index.html">
+          <img src="assets/images/logo2.svg" class="img-fluid" width="24" height="24" alt="logo">
+        </a>
+        <a class="navbar-brand py-4 lh-1 d-none d-lg-block" href="index.html">
+          <img src="assets/images/logo.svg" class="img-fluid logo" alt="logo">
+        </a>
+      </h1>
+
+      <a class="navbar-toggler border-0 text-secondary py-4" role="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-icons-outlined align-middle">drag_handle</span>
+      </a>
+
+      <div class="collapse navbar-collapse flex-grow-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-xxl-0 text-center gap-lg-4 gap-xxl-7">
+          <li class="nav-item mb-0">
+            <a class="nav-link py-4 " href="index.html">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4 " href="course.html">課程介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <span class="material-icons align-middle me-1">account_circle</span>登入
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="pt-1 px-4 info-line bg-secondary w-50 position-absolute bottom-0 start-0"></div>
+  <div class="pt-1 px-4 info-line bg-third w-50 position-absolute bottom-0 start-50"></div>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-primary text-white px-5 pt-3 pb-6 login-modal">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 mt-0 mb-4 mb-xxl-7">
+        <h4 class="modal-title text-center fw-bold" id="loginModal">登入</h4>
+        <form class="text-gray-light">
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputEmail1" class="form-label fs-6">信箱</label>
+            <input type="email" class="form-control bg-primary" id="inputEmail1" placeholder="請輸入信箱">
+          </div>
+          <div class="mb-3 mb-xxl-5">
+            <label for="inputPassword1" class="form-label fs-6">密碼</label>
+            <input type="password" class="form-control bg-primary" id="inputPassword1" placeholder="請輸入密碼">
+          </div>
+          <button type="submit" class="btn btn-gradient-primary w-100 fs-6 py-2 rounded-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer border-0 p-0">
+        <p class="separator w-100 d-flex flex-row m-0 text-gray-light mb-3">其他登入方式</p>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center mb-3 mb-xxl-4" role="button">
+          <img src="assets/images/icon_fb.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_fb">
+          <span class="flex-fill">Facebook 登入</span>
+        </a>
+        <a class="btn btn-black fs-6 py-2 border border-white rounded-4 w-100 d-flex justify-content-center align-items-center" role="button">
+          <img src="assets/images/icon_google.svg" class="img-fluid ms-5" width="24" height="24" alt="icon_google">
+          <span class="flex-fill">Google 登入</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<main>
+    <!-- 付款進度條 -->
+    <section class="bg-dark py-4 pb-xxl-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-4 timeline"></div>
+                <div class="col-4 timeline"></div>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex flex-column align-items-center">
+                  <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center active">
+                    <span class="align-middle small">1</span>
+                  </div>
+                  <p class="text-secondary mt-1">課程報名</p>
+                </div>
+                <div class="col-4 d-flex flex-column align-items-center">
+                    <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center">
+                        <!-- <span class="material-icons-outlined align-middle small">done</span> -->
+                        <span class="align-middle small">2</span>
+                    </div>
+                    <p class="text-gray-light mt-1">信用卡付款</p>
+                </div>
+                <div class="col-4 d-flex flex-column align-items-center">
+                    <div class="text-white bg-dark border border-gray-light rounded-circle text-center step d-flex justify-content-center align-items-center">
+                        <span class="align-middle small">3</span>
+                    </div>
+                    <p class="text-gray-light mt-1">付款成功</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-black pt-4 pb-6 pt-xxl-7 pb-xxl-12">
+      <div class="container">
+        <div class="row gy-6 gy-xxl-7 justify-content-center align-items-center">
+            <div class="col-12 col-xxl-4 regist-teacher">
+              <div class="card bg-primary p-4 py-xxl-7 px-xxl-5 card-teacher position-relative">
+                <div class="d-flex flex-column align-items-center mb-3 mb-lg-4">
+                  <img src="assets/images/teacher01.jpg" class="img-fluid rounded-circle border border-3 border-secondary" width="100" height="100" alt="teacher01">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title text-white mb-2 mb-xxl-1 fs-xxl-6 fw-bold">2022 Python 全攻略｜從入門到實務</h5>
+                  <p class="card-text text-secondary mb-2">前端語言</p>
+                  <p class="card-text text-white">帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的 HTML 語法出發。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xxl-7 regist-form">
+                <div class="card bg-dark p-4 py-xxl-7 px-xxl-5">
+                  <h4 class="card-title text-white mb-4 mb-xxl-7 fw-bold text-center">課程報名</h4>
+                  <div class="card-body d-flex flex-column align-items-center align-items-xxl-start">
+                    <p class="card-text text-white fw-bold fs-6 mb-3">選擇付款方式</p>
+                    <ul class="list-unstyled row d-xxl-flex mb-5">
+                        <li class="col-6 col-xxl-auto mb-2 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block active" role="button">信用卡付款</a></li>
+                        <li class="col-6 col-xxl-auto mb-2 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block" role="button">超商繳款</a></li>
+                        <li class="col-6 col-xxl-auto mb-0 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block" role="button">ATM轉帳</a></li>
+                        <li class="col-6 col-xxl-auto mb-0 mb-xxl-0"><a class="btn btn-black p-3 px-xxl-5 border border-white rounded-5 d-block d-xxl-inline-block" role="button">12期分期付款</a></li>
+                    </ul>
+                    <p class="card-text text-white fw-bold fs-6 mb-3">訂單資訊</p>
+
+                    <form class="row text-gray-light">
+                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
+                            <label for="name" class="form-label fs-6">姓名</label>
+                            <input type="text" class="form-control bg-primary" id="name" placeholder="請輸入姓名">
+                        </div>
+                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
+                            <label for="phone" class="form-label fs-6">電話</label>
+                            <input type="tel" class="form-control bg-primary" id="phone" placeholder="請輸入電話號碼">
+                        </div>
+                        <div class="col-12 mb-3 mb-xxl-5">
+                            <label for="email" class="form-label fs-6">Email</label>
+                            <input type="email" class="form-control bg-primary" id="email" placeholder="請輸入Email">
+                        </div>
+                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
+                            <label for="course" class="form-label fs-6">課程</label>
+                            <select class="form-select bg-primary text-white" aria-label="course" id="course">
+                                <option value="1600" selected>1堂50分鐘</option>
+                                <option value="1400">3堂50分鐘</option>
+                                <option value="1000">10堂50分鐘</option>
+                                <option value="900">20堂50分鐘</option>
+                                <option value="洽談報價">客製化課程/專案製作</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-xxl-6 mb-3 mb-xxl-5">
+                            <label for="course-date" class="form-label fs-6">想預約的日期</label>
+                            <input type="text" class="form-control bg-primary" id="course-date" placeholder="請選擇日期">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="place" class="form-label fs-6">上課地點</label>
+                            <input type="text" class="form-control bg-primary" id="place" placeholder="請輸入上課地點">
+                        </div>
+
+                        <div class="col-12 d-xxl-flex justify-content-xxl-between align-items-xxl-center">
+                            <p class="fs-6 text-white ff-azeret-mono mb-4 mb-xxl-0">NT$1600</p>
+                            <a role="button" class="btn btn-gradient-primary fs-6 py-2 px-7 rounded-4 d-block">前往結賬</a>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+    <footer class="bg-gray-dark">
+    <div class="container">
+        <p class="fs-8 text-gray text-center mb-0 py-3 py-xxl-4 fs-xxl-7 ff-azeret-mono">Coding Home © 2022 All Rights Reserved</p>
+    </div>
+</footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
