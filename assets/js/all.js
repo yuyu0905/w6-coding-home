@@ -42,7 +42,8 @@ $(function () {
   var elem = document.getElementById('course-date');
   var datepicker = new Datepicker(elem, {
     format: "yyyy/mm/dd",
-    language: "zh-TW"
+    language: "zh-TW",
+    autohide: true
   }); // 選擇付款方式
 
   $(".pay-type").click(function (e) {
