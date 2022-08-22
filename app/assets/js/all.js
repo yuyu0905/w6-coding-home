@@ -44,6 +44,7 @@ $(function() {
   const datepicker = new Datepicker(elem, {
     format: "yyyy/mm/dd",
     language: "zh-TW",
+    autohide: true,
   });
 
   // 選擇付款方式
